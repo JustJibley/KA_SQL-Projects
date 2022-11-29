@@ -6,6 +6,10 @@ Insert Into Bike_Store Values (4, "Demon", "ATV", 2, 4500);
 Insert Into Bike_Store Values (5, "Crusher", "Mountain", 7, 3200);
 
 
+Select * from Bike_Store;
+
 Select bike_type, Sum(stock) from Bike_Store group by bike_type;
 
-Select * from Bike_Store;
+Select id, item, (stock * cost) as Total_item_value from Bike_Store;
+
+Select SUM(Stock) as total_stock, ((SUM(stock)*(SUM(cost)))) as total_Value from Bike_Store;
