@@ -1,0 +1,11 @@
+Create Table Bike_Store (id Integer, item Text, bike_type Text, stock Integer, cost Integer);
+
+Insert Into Bike_Store Values (1, "Offroader", "Mountain", 3, 2500);
+Insert Into Bike_Store Values (2, "Cutlass", "Street", 8, 1900), (3, "SpeedRacer", "Street", 2, 3000);
+Insert Into Bike_Store Values (4, "Demon", "ATV", 2, 4500);
+Insert Into Bike_Store Values (5, "Crusher", "Mountain", 7, 3200);
+
+
+Select bike_type, Sum(stock) from Bike_Store group by bike_type;
+
+Select * from Bike_Store;
